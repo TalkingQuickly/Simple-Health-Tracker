@@ -1,0 +1,35 @@
+<h1>Listing days</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Food veg actual</th>
+    <th>Food junk actual</th>
+    <th>Hours sleep actual</th>
+    <th>Exercise actual</th>
+    <th>Smoke actual</th>
+    <th>Drinks actual</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @days.each do |day| %>
+  <tr>
+    <td><%= day.user_id %></td>
+    <td><%= day.food_veg_actual %></td>
+    <td><%= day.food_junk_actual %></td>
+    <td><%= day.hours_sleep_actual %></td>
+    <td><%= day.exercise_actual %></td>
+    <td><%= day.smoke_actual %></td>
+    <td><%= day.drinks_actual %></td>
+    <td><%= link_to 'Show', day %></td>
+    <td><%= link_to 'Edit', edit_day_path(day) %></td>
+    <td><%= link_to 'Destroy', day, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Day', new_day_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  food_veg_actual: 1
+  food_junk_actual: 1
+  hours_sleep_actual: 1.5
+  exercise_actual: 1
+  smoke_actual: 1
+  drinks_actual: 1
+
+two:
+  user_id: 1
+  food_veg_actual: 1
+  food_junk_actual: 1
+  hours_sleep_actual: 1.5
+  exercise_actual: 1
+  smoke_actual: 1
+  drinks_actual: 1

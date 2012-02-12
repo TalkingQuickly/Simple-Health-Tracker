@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @day.user_id %>
+</p>
+
+<p>
+  <b>Food veg actual:</b>
+  <%= @day.food_veg_actual %>
+</p>
+
+<p>
+  <b>Food junk actual:</b>
+  <%= @day.food_junk_actual %>
+</p>
+
+<p>
+  <b>Hours sleep actual:</b>
+  <%= @day.hours_sleep_actual %>
+</p>
+
+<p>
+  <b>Exercise actual:</b>
+  <%= @day.exercise_actual %>
+</p>
+
+<p>
+  <b>Smoke actual:</b>
+  <%= @day.smoke_actual %>
+</p>
+
+<p>
+  <b>Drinks actual:</b>
+  <%= @day.drinks_actual %>
+</p>
+
+
+<%= link_to 'Edit', edit_day_path(@day) %> |
+<%= link_to 'Back', days_path %>
