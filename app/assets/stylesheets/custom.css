@@ -10,3 +10,63 @@ form {
 .form-actions {
 	clear: both;
 }
+
+#main_scores_wrap {
+	width: 600px; 
+	margin-left: auto; 
+	margin-right: auto;
+	margin-top: 40px;  
+}
+
+.main_score_box {
+	width: 120px;
+	height: 120px; 
+	border-radius: 10px;
+	background-color:#e7e7e7;
+	text-align: center; 
+	float: left; 
+	margin-left: 60px; 
+	color: black;
+}
+
+.main_score_box_score {
+	padding-top: 25px;
+	padding-bottom: 15px; 
+	font-size: 30px;	
+	line-height: 30px; 
+}
+
+.main_score_box_title {
+	font-size: 14px; 
+}
+
+.red {
+	background-color: #ff7474;
+}
+
+.green {
+	background-color: #58ff77; 
+}
+
+#explanation {
+	width: 100%; 
+	clear:both;
+	padding-top: 30px; 
+	padding-bottom: 20px; 
+}
+
+#about_page {
+	width: 70%;
+}
+
+h2 {
+	margin-bottom: 15px; 
+}
+
+h1 {
+	margin-bottom: 15px; 
+}
+
+footer {
+	margin-top: 20px;
+}

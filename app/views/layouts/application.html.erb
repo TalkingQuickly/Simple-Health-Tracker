@@ -38,11 +38,17 @@
             <span class="i-bar"></span>
             <span class="i-bar"></span>
           </a>
-          <a class="brand" href="#">Healthtracker</a>
+          <a class="brand" href="/">Healthtracker</a>
           <div class="container nav-collapse">
             <ul class="nav">
-                <li><%= link_to "Dashboard", "/path1"  %></li>
-                <li><%= link_to "FAQ", "/path2"  %></li>
+                <li><%= link_to "Dashboard", "/dashboard"  %></li>
+                <li><%= link_to "New Entry", new_day_path  %></li>
+                <li><%= link_to "About", "/about"  %></li>
+                <% if !user_signed_in? %>
+                	<li><%= link_to "Login", "/users/sign_in"  %></li>
+                <% else %>
+             		<li><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></li>
+                <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -61,10 +67,10 @@
                 <h3>Stuff to do</h3>
                  <ul class="nav nav-list">
                     <li class="nav-header">Me</li>
-                    <li><%= link_to "Goto Dashboard", "/days/new"  %></li>
+                    <li><%= link_to "Goto Dashboard", "/dashboard"  %></li>
                     <li><%= link_to "Enter Info", "/days/new"  %></li>
                     <li><%= link_to "View all Days", "/days"  %></li>
-                    <li><%= link_to "Edit Profile", "/path3"  %></li>
+                    <li><%= link_to "Edit Profile", edit_user_registration_path  %></li>
                 </ul>
             </div>
            </div>
@@ -72,7 +78,7 @@
         </div>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; Ben Dixon 2012 | <a href="http://www.twitter.com/talkingquickly">@TalkingQuickly</a></p>
       </footer>
 
     </div> <!-- /container -->

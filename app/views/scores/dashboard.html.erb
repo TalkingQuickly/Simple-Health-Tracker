@@ -1,2 +1,33 @@
-<h1>Scores#dashboard</h1>
-<p>Find me in app/views/scores/dashboard.html.erb</p>
+<h1>Scores</h1>
+<div id="main_scores_wrap">
+	<div class="main_score_box <%= get_box_color(@one_week_score) %>">
+		<div class="main_score_box_score">
+			<%= number_with_precision(@one_week_score, :precision => 0)  %> / <%= number_with_precision(@maximum_score, :precision => 0) %>
+		</div>
+		<div class="main_score_box_title">
+			Last Week
+		</div>
+	</div>
+	<div class="main_score_box <%= get_box_color(@two_week_score) %>">
+		<div class="main_score_box_score">
+			<%= number_with_precision(@two_week_score, :precision => 0)  %> / <%= number_with_precision(@maximum_score, :precision => 0) %>
+		</div>
+		<div class="main_score_box_title">
+			Last 2 Weeks
+		</div>
+	</div>
+	<div class="main_score_box <%= get_box_color(@four_week_score) %>">
+		<div class="main_score_box_score">
+			<%= number_with_precision(@four_week_score, :precision => 0)  %> / <%= number_with_precision(@maximum_score, :precision => 0) %>
+		</div>
+		<div class="main_score_box_title">
+			Last 4 Weeks
+		</div>
+	</div>
+</div>
+<div id="explanation">
+	<h2>What does this mean?</h2>
+	<p>Each box shows your average score for the period over the maximum score possible (<%= @maximum_score %>)</p>
+	<p>The box goes green when you get above half of the maximum (six).</p>
+	<p>For more on what a "green" score means check the about page</p>
+</div>

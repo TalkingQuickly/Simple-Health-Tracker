@@ -1,9 +1,14 @@
 Healthtracker::Application.routes.draw do
+  get "pages/about"
+
   get "scores/dashboard"
 
   devise_for :users
 
-  root :to => "days#index"
+  root :to => "scores#dashboard"
+  
+  match '/dashboard' => 'scores#dashboard'
+  match '/about' => 'pages#about'
 
   resources :days
 
