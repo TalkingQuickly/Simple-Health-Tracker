@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  food_veg_target: 1
+  food_junk_target: 1
+  hours_sleep_target: 1.5
+  weekly_exercise_target: 1
+  smoke_total: 1.5
+  weekly_drinks_target: 1
+
+two:
+  name: MyString
+  food_veg_target: 1
+  food_junk_target: 1
+  hours_sleep_target: 1.5
+  weekly_exercise_target: 1
+  smoke_total: 1.5
+  weekly_drinks_target: 1

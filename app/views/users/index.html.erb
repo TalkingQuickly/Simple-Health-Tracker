@@ -1,0 +1,35 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Food veg target</th>
+    <th>Food junk target</th>
+    <th>Hours sleep target</th>
+    <th>Weekly exercise target</th>
+    <th>Smoke total</th>
+    <th>Weekly drinks target</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.food_veg_target %></td>
+    <td><%= user.food_junk_target %></td>
+    <td><%= user.hours_sleep_target %></td>
+    <td><%= user.weekly_exercise_target %></td>
+    <td><%= user.smoke_total %></td>
+    <td><%= user.weekly_drinks_target %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>

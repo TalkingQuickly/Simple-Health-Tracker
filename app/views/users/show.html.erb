@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Food veg target:</b>
+  <%= @user.food_veg_target %>
+</p>
+
+<p>
+  <b>Food junk target:</b>
+  <%= @user.food_junk_target %>
+</p>
+
+<p>
+  <b>Hours sleep target:</b>
+  <%= @user.hours_sleep_target %>
+</p>
+
+<p>
+  <b>Weekly exercise target:</b>
+  <%= @user.weekly_exercise_target %>
+</p>
+
+<p>
+  <b>Smoke total:</b>
+  <%= @user.smoke_total %>
+</p>
+
+<p>
+  <b>Weekly drinks target:</b>
+  <%= @user.weekly_drinks_target %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
