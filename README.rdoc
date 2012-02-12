@@ -1,4 +1,6 @@
 Simple health trackaing system
 
+Visit: http://sht.herokuapp.com for the live version
+
 TODO:
 Readme
