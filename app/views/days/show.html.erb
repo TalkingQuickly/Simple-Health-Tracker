@@ -1,40 +1,27 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>User:</b>
-  <%= @day.user_id %>
-</p>
+<label class="label"><%= t("activerecord.attributes.day.user_id", :default => t("activerecord.labels.user_id", :default => "User")) %>:</label>
+<p><%= @day.user_id %></p>
 
-<p>
-  <b>Food veg actual:</b>
-  <%= @day.food_veg_actual %>
-</p>
+<label class="label"><%= t("activerecord.attributes.day.food_veg_actual", :default => t("activerecord.labels.food_veg_actual", :default => "Food veg actual")) %>:</label>
+<p><%= @day.food_veg_actual %></p>
 
-<p>
-  <b>Food junk actual:</b>
-  <%= @day.food_junk_actual %>
-</p>
+<label class="label"><%= t("activerecord.attributes.day.food_junk_actual", :default => t("activerecord.labels.food_junk_actual", :default => "Food junk actual")) %>:</label>
+<p><%= @day.food_junk_actual %></p>
 
-<p>
-  <b>Hours sleep actual:</b>
-  <%= @day.hours_sleep_actual %>
-</p>
+<label class="label"><%= t("activerecord.attributes.day.hours_sleep_actual", :default => t("activerecord.labels.hours_sleep_actual", :default => "Hours sleep actual")) %>:</label>
+<p><%= @day.hours_sleep_actual %></p>
 
-<p>
-  <b>Exercise actual:</b>
-  <%= @day.exercise_actual %>
-</p>
+<label class="label"><%= t("activerecord.attributes.day.exercise_actual", :default => t("activerecord.labels.exercise_actual", :default => "Exercise actual")) %>:</label>
+<p><%= @day.exercise_actual %></p>
 
-<p>
-  <b>Smoke actual:</b>
-  <%= @day.smoke_actual %>
-</p>
+<label class="label"><%= t("activerecord.attributes.day.smoke_actual", :default => t("activerecord.labels.smoke_actual", :default => "Smoke actual")) %>:</label>
+<p><%= @day.smoke_actual %></p>
 
-<p>
-  <b>Drinks actual:</b>
-  <%= @day.drinks_actual %>
-</p>
+<label class="label"><%= t("activerecord.attributes.day.drinks_actual", :default => t("activerecord.labels.drinks_actual", :default => "Drinks actual")) %>:</label>
+<p><%= @day.drinks_actual %></p>
 
-
-<%= link_to 'Edit', edit_day_path(@day) %> |
-<%= link_to 'Back', days_path %>
+<div class="form-actions">
+<%= link_to "Back", days_path, :class => 'btn'  %>
+<%= link_to "Edit", edit_day_path(@day), :class => 'btn' %>
+<%= link_to "Delete", day_path(@day), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn' %>
+</div>

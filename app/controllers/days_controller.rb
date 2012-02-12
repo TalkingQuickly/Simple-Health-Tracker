@@ -1,8 +1,10 @@
 class DaysController < ApplicationController
+  before_filter :authenticate_user!
+  
   # GET /days
   # GET /days.json
   def index
-    @days = Day.all
+    @days = Day.find_all_by_user_id(current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,7 +43,7 @@ class DaysController < ApplicationController
   # POST /days.json
   def create
     @day = Day.new(params[:day])
-
+    @day.user_id = current_user.id
     respond_to do |format|
       if @day.save
         format.html { redirect_to @day, notice: 'Day was successfully created.' }
@@ -57,7 +59,7 @@ class DaysController < ApplicationController
   # PUT /days/1.json
   def update
     @day = Day.find(params[:id])
-
+    @day.user_id = current_user.id
     respond_to do |format|
       if @day.update_attributes(params[:day])
         format.html { redirect_to @day, notice: 'Day was successfully updated.' }

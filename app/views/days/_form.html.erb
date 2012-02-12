@@ -1,45 +1,65 @@
-<%= form_for(@day) do |f| %>
-  <% if @day.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@day.errors.count, "error") %> prohibited this day from being saved:</h2>
+<div class="control-group">
+   <%= f.label :date, t("activerecord.attributes.day.date", :default => "Date"), :class => 'control-label' %>
+  <div class="input">
+    <%= f.datepicker :date, :class => 'number_field' %>
+  </div>
+</div>
 
-      <ul>
-      <% @day.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="control-group">
+   <%= f.label :food_veg_actual, t("activerecord.attributes.day.food_veg_actual", :default => "Vegtables Eaten"), :class => 'control-label'  %>
+  <div class="input">
+    
+    <%= f.select :food_veg_actual, options_for_select([["A Lot", "2"], 
+                  ["Some", "1"], ["None" ,"-2"]], [(@day.food_veg_actual || '1')]
+                 ), {:multiple => true} %>
+  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+<div class="control-group">
+   <%= f.label :food_junk_actual, t("activerecord.attributes.day.food_junk_actual", :default => "Junk Food Eaten"), :class => 'control-label' %>
+  <div class="input">
+     <%= f.select :food_junk_actual, options_for_select([["A Lot", "-2"], 
+                  ["Some", "-1"], ["None" ,"2"]], [(@day.food_junk_actual || '-1')]
+                 ), {:multiple => true} %>
   </div>
-  <div class="field">
-    <%= f.label :food_veg_actual %><br />
-    <%= f.number_field :food_veg_actual %>
+</div>
+
+<div class="control-group">
+   <%= f.label :hours_sleep_actual, t("activerecord.attributes.day.hours_sleep_actual", :default => "Amount of sleep"), :class => 'control-label' %>
+  <div class="input">
+    <%= f.select :hours_sleep_actual, options_for_select([["Not Enough" ,"-2"],["Enough but only just", "1"], 
+                  ["Spot On", "2"]], [(@day.hours_sleep_actual || '1')]
+                 ), {:multiple => true} %>
   </div>
-  <div class="field">
-    <%= f.label :food_junk_actual %><br />
-    <%= f.number_field :food_junk_actual %>
+</div>
+
+<div class="control-group">
+   <%= f.label :exercise_actual, t("activerecord.attributes.day.exercise_actual", :default => "Exercise done"), :class => 'control-label' %>
+  <div class="input">
+    <%= f.select :exercise_actual, options_for_select([["None" ,"0"], 
+                  ["Some", "1"], ["A Lot", "2"]], [(@day.exercise_actual || '1')]
+                 ), {:multiple => true} %>
   </div>
-  <div class="field">
-    <%= f.label :hours_sleep_actual %><br />
-    <%= f.text_field :hours_sleep_actual %>
+</div>
+
+<div class="control-group">
+   <%= f.label :smoke_actual, t("activerecord.attributes.day.smoke_actual", :default => "Cigarettes Smoked"), :class => 'control-label' %>
+  <div class="input">
+    <%= f.select :smoke_actual, options_for_select([["None", "2"], 
+                  ["The Usual", "-1"], ["A Lot" ,"-2"]], [(@day.smoke_actual || '2')]
+                 ), {:multiple => true} %>
   </div>
-  <div class="field">
-    <%= f.label :exercise_actual %><br />
-    <%= f.number_field :exercise_actual %>
+</div>
+
+<div class="control-group">
+   <%= f.label :drinks_actual, t("activerecord.attributes.day.drinks_actual", :default => "Alcoholic Drinks"), :class => 'control-label' %>
+  <div class="input">
+    <%= f.select :drinks_actual, options_for_select([["Just Right", "2"], 
+                  ["A bit too much", "-1"], ["Way too many" ,"-2"]], [(@day.drinks_actual || '2')]
+                 ), {:multiple => true} %>
   </div>
-  <div class="field">
-    <%= f.label :smoke_actual %><br />
-    <%= f.number_field :smoke_actual %>
-  </div>
-  <div class="field">
-    <%= f.label :drinks_actual %><br />
-    <%= f.number_field :drinks_actual %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
+<div class="form-actions">
+  <button class="btn primary" type="submit">Save</button> or
+	<%= link_to "Cancel", days_path %>
+</div>

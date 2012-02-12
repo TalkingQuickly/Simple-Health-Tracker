@@ -1,5 +1,3 @@
-<h1>New day</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', days_path %>
+<%= form_for @day, :url => days_path, :html => { :class => 'form_inline' } do |f| -%>
+  <%= render :partial => "form", :locals => {:f => f} %>
+<% end -%>

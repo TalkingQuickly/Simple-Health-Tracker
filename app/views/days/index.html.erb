@@ -1,35 +1,27 @@
-<h1>Listing days</h1>
-
-<table>
+<h1>Days</h1>
+<table class="table table-striped">
+ <thead>
   <tr>
-    <th>User</th>
-    <th>Food veg actual</th>
-    <th>Food junk actual</th>
-    <th>Hours sleep actual</th>
-    <th>Exercise actual</th>
-    <th>Smoke actual</th>
-    <th>Drinks actual</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>ID</th>
+    <th>Date</th>
+    <th>Score</th>
+    <th>Actions</th>
   </tr>
-
-<% @days.each do |day| %>
-  <tr>
-    <td><%= day.user_id %></td>
-    <td><%= day.food_veg_actual %></td>
-    <td><%= day.food_junk_actual %></td>
-    <td><%= day.hours_sleep_actual %></td>
-    <td><%= day.exercise_actual %></td>
-    <td><%= day.smoke_actual %></td>
-    <td><%= day.drinks_actual %></td>
-    <td><%= link_to 'Show', day %></td>
-    <td><%= link_to 'Edit', edit_day_path(day) %></td>
-    <td><%= link_to 'Destroy', day, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+  </thead>
+  <tbody>
+  <% @days.each do |day| -%>
+   <tr>
+    	<td><%= day.id %></td>
+    	<td><%= day.date %></td>
+        <td><%= day.score %></td>
+    <td>
+      <%= link_to "Show", day_path(day) %>
+      <%= link_to "Edit", edit_day_path(day) %>
+      <%= link_to "Destroy", day_path(day), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+    </td>
+    </tr>
+    <% end -%>
+   </tbody>
 </table>
 
-<br />
-
-<%= link_to 'New Day', new_day_path %>
+<%= link_to "New", new_day_path, :class => 'btn btn-primary' %>

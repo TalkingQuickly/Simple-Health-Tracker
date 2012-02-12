@@ -1,6 +1,4 @@
-<h1>Editing day</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @day %> |
-<%= link_to 'Back', days_path %>
+<%= form_for @day, :url => day_path(@day), :html => { :class => "edit_day form_inline", :id => "edit_day" } do |f| -%>
+  <input name="_method" type="hidden" value="put" />
+  <%= render :partial => "form", :locals => {:f => f} %>
+<% end -%>
