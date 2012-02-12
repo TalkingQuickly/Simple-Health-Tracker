@@ -18,12 +18,14 @@ class ScoresController < ApplicationController
       the_records = current_user.days.find(:all, :conditions => ['created_at > ?', period_in_weeks.week.ago])
     
       @the_score = 0
+      count = 0
       
       the_records.each do |rec|
-        @the_score = @the_score + rec.score  
+        @the_score = @the_score + rec.score
+        count = count + 1  
       end 
       
-      @the_score
+      @the_score / Float(count)
       
     else
       
