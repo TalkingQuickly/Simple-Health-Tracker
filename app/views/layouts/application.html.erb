@@ -22,11 +22,6 @@
       }
     </style>
 
-    <!-- Le fav and touch icons -->
-    <link href="images/favicon.ico" rel="shortcut icon">
-    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
   </head>
   <body>
 
@@ -71,6 +66,11 @@
                     <li><%= link_to "Enter Info", "/days/new"  %></li>
                     <li><%= link_to "View all Days", "/days"  %></li>
                     <li><%= link_to "Edit Profile", edit_user_registration_path  %></li>
+                    <% if !user_signed_in? %>
+                      <li><%= link_to "Login", "/users/sign_in"  %></li>
+                    <% else %>
+                      <li><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></li>
+                    <% end %>
                 </ul>
             </div>
            </div>
