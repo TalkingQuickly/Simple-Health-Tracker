@@ -4,7 +4,7 @@
 		<td>
 			<strong>Category</strong>
 		</td>
-		<td>
+		<td  class="score_column">
 			<strong>Score</strong>
 		</td>
 	</tr>
@@ -12,7 +12,7 @@
 		<td>	
 			Fruit and Veg
 		</td>
-		<td>
+		<td class="score_column">
 			<%= @day.food_veg_actual %></p>
 		</td>
 	</tr>
@@ -20,7 +20,7 @@
 		<td>	
 			Junk Food
 		</td>
-		<td>
+		<td class="score_column">
 			<%= @day.food_junk_actual  %></p>
 		</td>
 	</tr>
@@ -28,7 +28,7 @@
 		<td>	
 			Sleep
 		</td>
-		<td>
+		<td class="score_column">
 			<%= @day.hours_sleep_actual  %></p>
 		</td>
 	</tr>
@@ -36,7 +36,7 @@
 		<td>	
 			Exercise
 		</td>
-		<td>
+		<td class="score_column">
 			<%= @day.exercise_actual  %></p>
 		</td>
 	</tr>
@@ -44,7 +44,7 @@
 		<td>	
 			Smoking
 		</td>
-		<td>
+		<td class="score_column">
 			<%= @day.smoke_actual  %></p>
 		</td>
 	</tr>
@@ -52,7 +52,7 @@
 		<td>	
 			Drinking
 		</td>
-		<td>
+		<td class="score_column">
 			<%= @day.drinks_actual  %></p>
 		</td>
 	</tr>
@@ -60,7 +60,7 @@
 		<td>	
 			<strong>Total</strong>
 		</td>
-		<td>
+		<td class="score_column">
 			<strong><%= @day.score  %></p></strong>
 		</td>
 	</tr>
