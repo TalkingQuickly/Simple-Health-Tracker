@@ -1,6 +1,18 @@
-Simple health trackaing system
+Simple health tracking system
 
 Visit: http://sht.herokuapp.com for the live version
 
+A simple Ruby on Rails application for generating a healthiness score based on a subjective assesment of key variables including; 
+- Junk food eaten
+- Alcohol consumed
+- Sleep
+- Exercise
+- Vegetables eaten
+- Smoking
+
 TODO:
-Readme
+- Readme
+- Public scorecard page (opt out)
+- Email alerts if missing a days entry & prefereces screen to manage these
+- jQuery mobile interface
+- Openauth signin (twitter & facebook)
