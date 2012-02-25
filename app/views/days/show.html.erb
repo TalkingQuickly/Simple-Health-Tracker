@@ -1,24 +1,71 @@
+<h1><%= @day.date %></h1>
+<table id="score_breakdown">
+	<tr>
+		<td>
+			<strong>Category</strong>
+		</td>
+		<td>
+			<strong>Score</strong>
+		</td>
+	</tr>
+	<tr>
+		<td>	
+			Fruit and Veg
+		</td>
+		<td>
+			<%= @day.food_veg_actual %></p>
+		</td>
+	</tr>
+	<tr>
+		<td>	
+			Junk Food
+		</td>
+		<td>
+			<%= @day.food_junk_actual  %></p>
+		</td>
+	</tr>
+	<tr>
+		<td>	
+			Sleep
+		</td>
+		<td>
+			<%= @day.hours_sleep_actual  %></p>
+		</td>
+	</tr>
+	<tr>
+		<td>	
+			Exercise
+		</td>
+		<td>
+			<%= @day.exercise_actual  %></p>
+		</td>
+	</tr>
+	<tr>
+		<td>	
+			Smoking
+		</td>
+		<td>
+			<%= @day.smoke_actual  %></p>
+		</td>
+	</tr>
+	<tr>
+		<td>	
+			Drinking
+		</td>
+		<td>
+			<%= @day.drinks_actual  %></p>
+		</td>
+	</tr>
+	<tr>
+		<td>	
+			<strong>Total</strong>
+		</td>
+		<td>
+			<strong><%= @day.score  %></p></strong>
+		</td>
+	</tr>
+</table>
 
-<label class="label"><%= t("activerecord.attributes.day.user_id", :default => t("activerecord.labels.user_id", :default => "User")) %>:</label>
-<p><%= @day.user_id %></p>
-
-<label class="label"><%= t("activerecord.attributes.day.food_veg_actual", :default => t("activerecord.labels.food_veg_actual", :default => "Food veg actual")) %>:</label>
-<p><%= @day.food_veg_actual %></p>
-
-<label class="label"><%= t("activerecord.attributes.day.food_junk_actual", :default => t("activerecord.labels.food_junk_actual", :default => "Food junk actual")) %>:</label>
-<p><%= @day.food_junk_actual %></p>
-
-<label class="label"><%= t("activerecord.attributes.day.hours_sleep_actual", :default => t("activerecord.labels.hours_sleep_actual", :default => "Hours sleep actual")) %>:</label>
-<p><%= @day.hours_sleep_actual %></p>
-
-<label class="label"><%= t("activerecord.attributes.day.exercise_actual", :default => t("activerecord.labels.exercise_actual", :default => "Exercise actual")) %>:</label>
-<p><%= @day.exercise_actual %></p>
-
-<label class="label"><%= t("activerecord.attributes.day.smoke_actual", :default => t("activerecord.labels.smoke_actual", :default => "Smoke actual")) %>:</label>
-<p><%= @day.smoke_actual %></p>
-
-<label class="label"><%= t("activerecord.attributes.day.drinks_actual", :default => t("activerecord.labels.drinks_actual", :default => "Drinks actual")) %>:</label>
-<p><%= @day.drinks_actual %></p>
 
 <div class="form-actions">
 <%= link_to "Back", days_path, :class => 'btn'  %>

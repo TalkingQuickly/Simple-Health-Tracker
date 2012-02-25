@@ -70,3 +70,7 @@ h1 {
 footer {
 	margin-top: 20px;
 }
+
+table#score_breakdown {
+	width: 30%;
+}
