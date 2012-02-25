@@ -43,6 +43,8 @@ class DaysController < ApplicationController
   # POST /days.json
   def create
     @day = Day.new(params[:day])
+    logger.debug "date is " + params[:day][:date] 
+    @day.date = params[:day][:date]
     @day.user_id = current_user.id
     respond_to do |format|
       if @day.save

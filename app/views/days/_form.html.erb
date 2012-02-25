@@ -1,7 +1,7 @@
 <div class="control-group">
    <%= f.label :date, t("activerecord.attributes.day.date", :default => "Date"), :class => 'control-label' %>
   <div class="input">
-    <%= f.datepicker :date, :class => 'number_field' %>
+    <%= f.datepicker :date, :class => 'date_field', :dateFormat => 'dd-mm-yy'  %>
   </div>
 </div>
 
