@@ -61,14 +61,14 @@
               <div class="well sidebar-nav">
                 <h3>stuff to do</h3>
                  <ul class="nav nav-list">
-                    <li><%= link_to "Goto Dashboard", "/dashboard"  %></li>
-                    <li><%= link_to "Enter Info", "/days/new"  %></li>
-                    <li><%= link_to "View all Days", "/days"  %></li>
-                    <li><%= link_to "Edit Profile", edit_user_registration_path  %></li>
+                    <li><%= link_to "goto Dashboard", "/dashboard"  %></li>
+                    <li><%= link_to "enter info", "/days/new"  %></li>
+                    <li><%= link_to "view all days", "/days"  %></li>
+                    <li><%= link_to "edit profile", edit_user_registration_path  %></li>
                     <% if !user_signed_in? %>
-                      <li><%= link_to "Login", "/users/sign_in"  %></li>
+                      <li><%= link_to "login", "/users/sign_in"  %></li>
                     <% else %>
-                      <li><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></li>
+                      <li><%= link_to("logout", destroy_user_session_path, :method => :delete) %></li>
                     <% end %>
                 </ul>
             </div>
