@@ -14,5 +14,4 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require twitter/bootstrap
-//= jquery-overrides
 //= require_tree .
